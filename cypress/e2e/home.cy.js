@@ -6,6 +6,6 @@ describe('home page', () => {
 
   it.only('the feature on home are correct', () => {
     cy.visit('localhost:3000')
-    cy.get('dt')
+    cy.get('dt').eq(0).contains('4 Courses')
   })
 })
