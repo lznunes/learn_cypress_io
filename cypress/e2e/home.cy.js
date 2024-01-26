@@ -1,11 +1,17 @@
 describe('home page', () => {
-  it('the h1 contain correct text', () => {
+  
+  
+  
+  beforeEach(() => {
     cy.visit('localhost:3000')
+  })
+
+
+  it('the h1 contain correct text', () => {
     cy.get('[data-test="hero-heading"]').contains('Testing Next.js Applications with Cypress')
   })
 
-  it.only('the feature on home are correct', () => {
-    cy.visit('localhost:3000')
+  it('the feature on home are correct', () => {
     cy.get('dt').eq(0).contains('4 Courses')
     cy.get('dt').eq(1).contains('25+ Lessons')
     cy.get('dt').eq(2).contains('Free and Open Source')
