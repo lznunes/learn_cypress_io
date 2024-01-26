@@ -1,6 +1,6 @@
 describe('home page', () => {
   it('the h1 contain correct text', () => {
     cy.visit('localhost:3000')
-    cy.get('h1')
+    cy.get('h1').contains('Testing Next.js Applications with Cypress')
   })
 })
