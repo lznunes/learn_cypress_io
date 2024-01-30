@@ -6,9 +6,8 @@ describe('home page', () => {
     cy.visit('localhost:3000')
   })
 
-
   it('the h1 contain correct text', () => {
-    cy.get('[data-test="hero-heading"]').contains('Testing Next.js Applications with Cypress')
+    cy.getByData("hero-heading").contains('Testing Next.js Applications with Cypress')
   })
 
   it('the feature on home are correct', () => {
